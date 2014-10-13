@@ -49,12 +49,13 @@ std::string get_file_contents(const char *fn) {
 
 int main() {
 	std::string last_stat = get_file_contents(stats_fn);
+	set_led(0);
 	for(;;) {
 		while(get_file_contents(stats_fn) != last_stat) {
 			last_stat = get_file_contents(stats_fn);
-			set_led(0);
-			usleep(flash_off_interval);
 			set_led(1);
+			usleep(flash_off_interval);
+			set_led(0);
 			usleep(flash_on_interval);
 		}
 		usleep(check_interval);
