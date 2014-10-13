@@ -11,6 +11,8 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#include <signal.h>
+
 // This is the interface to the LED.
 static const char *led_fn = "/proc/acpi/ibm/led";
 // The file to watch.  Whenever this changes, the LED flashes.  You could for example tie the
@@ -32,6 +34,12 @@ void set_led(int new_status) {
 	}
 }
 
+void sig_hndl(int s){
+        printf("Caught signal %d/n",s);
+        set_led(1);
+        exit(1);
+}
+
 // Easiest way to read a file, from
 // http://insanecoding.blogspot.com/2011/11/how-to-read-in-file-in-c.html
 // The faster methods don't work, probably because of bad interaction of seek with /proc files.
@@ -48,6 +56,15 @@ std::string get_file_contents(const char *fn) {
 }
 
 int main() {
+	struct sigaction sigIntHandler;
+
+	sigIntHandler.sa_handler = sig_hndl;
+	sigemptyset(&sigIntHandler.sa_mask);
+	sigIntHandler.sa_flags = 0;
+
+	sigaction(SIGINT, &sigIntHandler, NULL);
+        sigaction(SIGTERM, &sigIntHandler, NULL);
+
 	std::string last_stat = get_file_contents(stats_fn);
 	set_led(0);
 	for(;;) {
@@ -60,4 +77,5 @@ int main() {
 		}
 		usleep(check_interval);
 	}
+	set_led(1);
 }
