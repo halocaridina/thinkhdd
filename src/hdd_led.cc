@@ -35,9 +35,9 @@ void set_led(int new_status) {
 }
 
 void sig_hndl(int s){
-        printf("Caught signal %d/n",s);
+        printf("Caught signal %d\n",s);
         set_led(1);
-        exit(1);
+        exit(0);
 }
 
 // Easiest way to read a file, from
