@@ -20,3 +20,9 @@ missing
 stamp-h1
 thinkhdd
 INSTALL
+debian/files
+debian/thinkhdd.substvars
+debian/thinkhdd.postinst.debhelper
+debian/thinkhdd.postrm.debhelper
+debian/thinkhdd.prerm.debhelper
+

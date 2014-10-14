@@ -1,0 +1,9 @@
+[Unit]
+Description=ThinkHDD i LED control
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thinkhdd
+
+[Install]
+WantedBy=multi-user.target

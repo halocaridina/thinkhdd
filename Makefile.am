@@ -1,1 +1,1 @@
-SUBDIRS = dist src
+SUBDIRS = src

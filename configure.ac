@@ -33,7 +33,6 @@ AC_SUBST([systemd_service_dir], [${systemd_service_dir}])
 
 AC_CONFIG_FILES([
   Makefile
-  dist/Makefile
   src/Makefile
 ])
 AC_OUTPUT
