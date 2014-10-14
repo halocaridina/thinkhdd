@@ -1,0 +1,14 @@
+Source: thinkhdd
+Section: unknown
+Priority: optional
+Maintainer: Nathaniel Roach <nroach44@prometheus.haven>
+Build-Depends: debhelper (>= 9), autotools-dev
+Standards-Version: 3.9.5
+#Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/thinkhdd.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/thinkhdd.git;a=summary
+
+Package: thinkhdd
+Architecture: i386 amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Blinks the Thinkpad I LED on disk activity

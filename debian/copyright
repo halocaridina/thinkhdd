@@ -1,0 +1,14 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: thinkhdd
+Source: <url://example.com>
+
+Files: *
+Copyright: Unknown Dan Stahlke <dan@stahlke.org>
+           2014 Nathaniel Roach <nroach44@gmail.com>
+License: BSD
+
+Files: debian/*
+Copyright: 2014 Nathaniel Roach <nroach44@prometheus.haven>
+License: BSD
+
+License: BSD
