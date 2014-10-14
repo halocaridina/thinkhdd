@@ -1,6 +1,14 @@
 The Debian Package thinkhdd
 ----------------------------
 
-Comments regarding the Package
+Based on
+http://stahlke.org/dan/hdd_led
+This package controls the 'i' LED on Thinkpads as a software controlled
+disk activity indicator.
+
+It monitors /proc/diskstats (which also shows activity to external drives)
+and toggles /proc/acpi/ibm/led. This version has been updated with
+signal handling and has a systemd unit file with automatic installation
+and starting.
 
  -- Nathaniel Roach <nroach44@prometheus.haven>  Tue, 14 Oct 2014 07:15:19 +0800
