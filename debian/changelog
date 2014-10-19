@@ -1,8 +1,14 @@
-thinkhdd (02) UNRELEASED; urgency=medium
+thinkhdd (03) stable; urgency=medium
 
-  * Use dh-systemd instead of autotools to manager systemd unit files
+  * Merge github/delan's patch to reduce reads by "about 50%"
 
- -- Nathaniel Roach <nroach44@arcturus.haven>  Tue, 14 Oct 2014 18:17:45 +0800
+ -- Nathaniel Roach <nroach44@prometheus.haven>  Sun, 19 Oct 2014 17:52:35 +0800
+
+thinkhdd (02) stable; urgency=medium
+
+  * Use dh-systemd instead of autotools to manage systemd unit files
+
+ -- Nathaniel Roach <nroach44@prometheus.haven>  Sun, 19 Oct 2014 17:52:11 +0800
 
 thinkhdd (01) unstable; urgency=low
 
