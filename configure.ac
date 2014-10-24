@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+#AC_PREREQ([2.69])
 AC_INIT(ThinkHDD, 03, nroach44@gmail.com)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADERS([config.h])
