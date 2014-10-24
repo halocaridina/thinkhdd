@@ -70,12 +70,12 @@ int main() {
 	for(;;) {
 		std::string cur_stat = get_file_contents(stats_fn);
 		while(cur_stat != last_stat) {
-			last_stat = cur_stat;
-			cur_stat = get_file_contents(stats_fn);
 			set_led(1);
 			usleep(flash_off_interval);
 			set_led(0);
 			usleep(flash_on_interval);
+			last_stat = cur_stat;
+			cur_stat = get_file_contents(stats_fn);
 		}
 		usleep(check_interval);
 	}
