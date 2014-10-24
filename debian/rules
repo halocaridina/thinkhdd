@@ -18,6 +18,7 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
+	autoreconf -fvi
 	dh $@  --with autotools-dev --with=systemd
 
 # debmake generated override targets
