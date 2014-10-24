@@ -1,3 +1,9 @@
+thinkhdd (04) stable; urgency=medium
+
+  * Revert delan's patch as it breaks my desired functionality
+
+ -- Nathaniel Roach <nroach44@arcturus.haven>  Fri, 24 Oct 2014 18:39:34 +0800
+
 thinkhdd (03) stable; urgency=medium
 
   * Merge github/delan's patch to reduce reads by "about 50%"
