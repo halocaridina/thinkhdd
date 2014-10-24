@@ -1,8 +1,8 @@
 language: cpp
 cache: apt
 compiler:
-	- gcc
+  - gcc
 before_install:
-	- sudo apt-get install build-essential dpkg-dev devscripts dh-systemd
+  - sudo apt-get install build-essential dpkg-dev devscripts dh-systemd
 script:
-	- dpkg-buildpackage -uc -b
+  - dpkg-buildpackage -uc -b
