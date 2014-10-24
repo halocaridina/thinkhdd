@@ -3,6 +3,8 @@ cache: apt
 compiler:
   - gcc
 before_install:
-  - sudo apt-get install build-essential dpkg-dev devscripts dh-systemd
+  - sudo apt-get install build-essential
 script:
-  - dpkg-buildpackage -uc -b
+  - ./autoreconf -fvi
+  - ./configure
+  - make
